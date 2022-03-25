@@ -43,7 +43,7 @@ jobs:
         #    target_triple: x86_64-pc-windows
         #  }
         - {
-            name: "Linux", artifact: "Linux-arm",
+            name: "Linux ARMv7", artifact: "Linux ARMv7",
             os: ubuntu-latest,
             has_release: true,
             target_triple: armv7-unknown-linux-gnueabihf
@@ -63,7 +63,12 @@ jobs:
           
     steps:
     - uses: actions/checkout@v2
-    
+    - uses: actions-rs/toolchain@v1
+      with:
+            toolchain: stable
+            target: armv7-unknown-linux-gnueabihf
+            override: true
+            
     - name: Install protoc
       uses: arduino/setup-protoc@v1.1.2
           
