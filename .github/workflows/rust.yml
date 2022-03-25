@@ -46,7 +46,7 @@ jobs:
             name: "Linux", artifact: "Linux-arm",
             os: ubuntu-latest,
             has_release: true,
-            target_triple: aarch64-unknown-linux
+            target_triple: armv7-unknown-linux-gnueabihf
           }
         #- {
         #    name: "macOS-x64", artifact: "macOS-x64",
