@@ -43,10 +43,10 @@ jobs:
         #    target_triple: x86_64-pc-windows
         #  }
         - {
-            name: "Linux", artifact: "Linux-x86_64",
+            name: "Linux", artifact: "Linux-arm",
             os: ubuntu-latest,
             has_release: true,
-            target_triple: x86_64-unknown-linux-gnu
+            target_triple: arm-unknown-linux-gnueabi
           }
         #- {
         #    name: "macOS-x64", artifact: "macOS-x64",
